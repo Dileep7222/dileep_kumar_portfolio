@@ -1,0 +1,176 @@
+/* Default Theme */
+:root {
+    --bg-color: rgba(231, 190, 190, 0.189);
+    --text-color: rgb(6, 0, 0);
+    --toggle-bg: #c8cdd3;
+    --toggle-icon: #ff9800;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --bg-color: rgb(11, 18, 30);
+    --text-color: rgba(255, 255, 255, 0.988);
+    --toggle-bg: #181313;
+    --toggle-icon: #f1f1f1;
+}
+
+/* Apply Theme Globally */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+/* Navbar Styling */
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    z-index: 2000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Title */
+.Navbar > aside {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #f15778, #8136ea);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 20px;
+}
+
+/* Navigation Links */
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navLinks li a {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.navLinks li a:hover {
+    color: #f15778;
+}
+
+/* Improved Theme Toggle Button */
+.themeToggle {
+    background: var(--toggle-bg);
+    border: none;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.themeToggle:hover {
+    transform: scale(1.1);
+}
+
+/* Toggle Icon */
+.icon {
+    font-size: 24px;
+    color: var(--toggle-icon);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .navLinks {
+        display: none;
+    }
+    
+    .themeToggle {
+        width: 45px;
+        height: 45px;
+    }
+}
+/* Theme Toggle Button - Modern Glassmorphism Look */
+.themeToggle {
+    width: 65px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 4px;
+    cursor: pointer;
+    transition: background 0.4s ease-in-out, border 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Circle Animation */
+.toggleCircle {
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    left: 5px;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), background 0.3s ease-in-out;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Styles */
+.dark .themeToggle {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .toggleCircle {
+    transform: translateX(30px);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Light Mode Styles */
+.light .toggleCircle {
+    transform: translateX(0);
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+/* Hover Effects */
+.themeToggle:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toggleCircle:hover {
+    transform: scale(1.1);
+}
+
+/* Icon Styling */
+.icon {
+    font-size: 14px;
+}
+

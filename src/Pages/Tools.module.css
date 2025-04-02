@@ -1,0 +1,133 @@
+/* Container styles */
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(246, 160, 160, 0.447);
+  max-width: 1100px;
+  width: 100%; /* Ensures the container spans the full width */
+  margin: auto;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+/* Title styles */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff007f, #6a00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Default Icon State (Hidden) */
+.Icon {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  opacity: 0;
+  transform: translate(-100px, -50px) rotate(-180deg); /* Start from left-top */
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Reveal Effect (Scroll Down - Left-Top to Right-Bottom) */
+.show {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0);
+}
+
+/* Reverse Effect (Scroll Up - Right-Bottom to Left-Top) */
+.hide {
+  opacity: 0;
+  transform: translate(-100px, -50px) rotate(-180deg); /* Move back to left-top */
+}
+
+/* Sequential Transition Delay (Left-Top to Right-Bottom for Show, Right-Bottom to Left-Top for Hide) */
+.show:nth-child(1), .hide:nth-child(12) { transition-delay: 0s; }
+.show:nth-child(2), .hide:nth-child(11) { transition-delay: 0.2s; }
+.show:nth-child(3), .hide:nth-child(10) { transition-delay: 0.4s; }
+.show:nth-child(4), .hide:nth-child(9)  { transition-delay: 0.6s; }
+.show:nth-child(5), .hide:nth-child(8)  { transition-delay: 0.8s; }
+.show:nth-child(6), .hide:nth-child(7)  { transition-delay: 1.0s; }
+.show:nth-child(7), .hide:nth-child(6)  { transition-delay: 1.2s; }
+.show:nth-child(8), .hide:nth-child(5)  { transition-delay: 1.4s; }
+.show:nth-child(9), .hide:nth-child(4)  { transition-delay: 1.6s; }
+.show:nth-child(10), .hide:nth-child(3) { transition-delay: 1.8s; }
+.show:nth-child(11), .hide:nth-child(2) { transition-delay: 2.0s; }
+.show:nth-child(12), .hide:nth-child(1) { transition-delay: 2.2s; }
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  /* Adjust grid layout to 2 columns on smaller screens */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Icon {
+    width: 80px; /* Smaller icon on mobile */
+    height: 80px;
+  }
+
+  .title {
+    font-size: 28px; /* Adjust title size for smaller screens */
+  }
+
+  /* Adjust the container padding */
+  .container {
+    padding: 15px;
+  }
+
+  /* Adjust container width for better responsiveness */
+  .container {
+    width: 90%; /* Ensure it doesn't stretch too much */
+    margin-bottom: 30px; /* Extra margin on smaller screens */
+  }
+
+  /* Adjust spacing and grid layout for smaller devices */
+  .grid {
+    gap: 15px;
+  }
+}
+
+/* Very Small Mobile Devices */
+@media screen and (max-width: 480px) {
+  /* Adjust grid layout to 1 column on very small screens */
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Icon {
+    width: 60px; /* Further reduce icon size */
+    height: 60px;
+  }
+
+  .title {
+    font-size: 24px; /* Smaller font size for very small screens */
+  }
+
+  .container {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  /* Adjust grid gap for small screens */
+  .grid {
+    gap: 10px;
+  }
+
+  /* Ensure the container stays within bounds on small screens */
+  .container {
+    width: 90%; /* Ensure container spans the full width on small devices */
+    margin-bottom: 20px; /* Adjust margin for small screens */
+  }
+}
