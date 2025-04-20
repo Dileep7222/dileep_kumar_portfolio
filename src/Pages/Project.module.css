@@ -18,13 +18,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
-  /* text-align: center; */
 }
 
 /*  Default Layout for Desktop/Laptop */
 .container > article {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap; /* Responsive layout ke liye */
 }
 
@@ -35,8 +34,21 @@
   box-shadow: 0 0 10px rgb(155, 172, 198);
   width: 300px;
   transition: all 0.3s ease-in-out;
-  /* text-align: center; */
+  margin-bottom: 1rem;
 }
+ .project div  a{
+  padding-inline: 10px;
+  padding-block: 5px;
+  border: 2px solid rgb(75, 75, 222);
+  border-radius: 10px;
+ }
+ .project div  a:hover{
+  background-color: #3a12db;
+  color: aliceblue;
+ }
+ .container img{
+  margin-bottom: 10px;
+ }
 hr{
   margin-bottom: 10px;
 }

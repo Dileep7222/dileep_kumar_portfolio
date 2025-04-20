@@ -15,18 +15,28 @@ const Projects = () => {
           <h2>Portfolio</h2>
           <hr />
           <img src="./assets/portfolio.png" alt="Project01" />
+          <div><a href="https://dileep7222.github.io/dileep_kumar_portfolio/">View Here</a></div>
         </div>
 
         <div className={style.project}>
           <h2>StudyVilla</h2>
           <hr />
           <img src="./assets/studyvilla.png" alt="Project 2" />
+          <div><a href="https://dileep7222.github.io/STUDY_VILLA/">View Here</a></div>
+
         </div>
 
         <div className={style.project}>
           <h2>Picverse</h2>
           <hr />
           <img src="./assets/picverse.png" alt="Project 3" />
+          <div><a href="https://dileep7222.github.io/PicVerse/">View Here</a></div>
+        </div>
+        <div className={style.project}>
+          <h2>Apple Vision Pro_Clone</h2>
+          <hr />
+          <img src="./assets/p4.png" alt="Project 4" />
+          <div> <a href="https://dileep7222.github.io/apple-vision-pro-clone/">View Here</a></div>
         </div>
       </article>
 
@@ -43,6 +53,7 @@ const Projects = () => {
             <h2>Portfolio    (React)</h2>
             <hr />
             <img src="./assets/portfolio.png" alt="Project 1" />
+            <div><a href="https://dileep7222.github.io/dileep_kumar_portfolio/">View Here</a></div>
           </div>
         </SwiperSlide>
 
@@ -51,6 +62,7 @@ const Projects = () => {
             <h2>StudyVilla  (Html,css,Javascript)</h2>
             <hr />
             <img src="./assets/studyvilla.png" alt="Project 2" />
+            <div><a href="https://dileep7222.github.io/STUDY_VILLA/">View Here</a></div>
           </div>
         </SwiperSlide>
 
@@ -59,13 +71,15 @@ const Projects = () => {
             <h2>PicVerse (Html,css,Javascript)</h2>
             <hr />
             <img src="./assets/picverse.png" alt="Project 3" />
+            <div><a href="https://dileep7222.github.io/PicVerse/">View Here</a></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={style.project}>
-            <h2>ReviewForm (React)</h2>
+            <h2>Apple Vision Pro_clone (Html,css,Javascript)</h2>
             <hr />
-            <img src="./assets/survey.png" alt="Project 3" />
+            <img src="./assets/p4.png" alt="Project 4" />
+            <div><a href="https://dileep7222.github.io/apple-vision-pro-clone/">View Here</a></div>
           </div>
         </SwiperSlide>
       </Swiper>

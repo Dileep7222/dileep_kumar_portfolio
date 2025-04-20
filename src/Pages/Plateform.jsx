@@ -3,7 +3,7 @@ import style from "./Plateform.module.css"
 const Plateform = () => {
   return (
     <section className={style.container}>
-        <h3>Connect With Us</h3>
+        <h3>Connect With Me</h3>
         <article>
 
             <div className={style.plateform}>
